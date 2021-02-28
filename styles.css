@@ -1,0 +1,701 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+body{
+    overflow-x: hidden;
+    position: relative;
+}
+
+/** Site Navigation starts here **/
+.nav-bar{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: .7rem 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+    background: rgb(255, 255, 255);
+    overflow-x: hidden;
+}
+
+.nav-bar a{
+    text-decoration: none;
+}
+
+.nav-bar a img{
+    width: 4.5rem;
+}
+
+.nav-bar nav ul{
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.nav-bar nav ul li{
+    display: inline-block;
+    margin-right: .5rem;
+}
+
+.nav-bar nav ul li a{
+    text-decoration: none;
+    font-size: .7rem;
+    text-transform: uppercase;
+    padding: .7rem;
+    color: hsl(273, 4%, 51%);
+    letter-spacing: .1rem;
+    transition: .5s;
+    font-weight: 700;
+    font-family: 'Karla', sans-serif;
+}
+
+.nav-bar nav ul li a:hover{
+    color: hsl(0, 0%, 0%);
+}
+
+.nav-bar nav ul li:nth-child(4) a{
+    color: hsl(0, 0%, 0%);
+}
+
+.nav-bar nav ul li:nth-child(4){
+    border: 1px solid black;
+    padding: .4rem;
+    position: relative;
+}
+
+.nav-bar nav ul li:nth-child(4):hover a{
+    color: hsl(0, 0%, 100%);
+    z-index: 2;
+}
+
+.nav-bar nav ul li:nth-child(4)::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: hsl(270, 9%, 17%);
+    transition: .5s;
+    z-index: -1;
+}
+
+.nav-bar nav ul li:nth-child(4):hover::after{
+    width: 100%;
+}
+
+.nav-bar .btn{
+    display: none;
+}
+
+/** Introduction section starts here **/
+.intro{
+    position: relative;
+    width: 100%;
+    padding: 0 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    background-color: hsl(256, 26%, 20%);
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.intro .right-intro-bg{
+    position: absolute;
+    right: -2rem;
+    top: -2rem;
+    width: 30%;
+    z-index: 1;
+}
+
+.intro .left-intro-bg{
+    position: absolute;
+    left: 0;
+    top: 76%;
+    width: 13%;
+}
+
+.intro .right-intro-bg-mobile{
+    display: none;
+}
+
+.intro .left-intro-bg-mobile{
+    display: none;
+}
+
+.intro .leftcolumn{
+    flex-basis: 47%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro .leftcolumn .leftcolumncontent{
+    position: relative;
+    margin-top: -7rem;
+}
+
+.intro .leftcolumn .leftcolumncontent hr{
+    width: 10rem;
+    color: hsl(0, 0%, 100%);
+}
+
+.intro .leftcolumn .leftcolumncontent h1{
+    font-size: 4.6rem;
+    font-weight: 400;
+    color: hsl(0, 0%, 100%);
+    margin: 4rem 0 1rem;
+    font-family: 'DM Serif Display', serif;
+    line-height: 4rem;
+} 
+
+.intro .leftcolumn .leftcolumncontent p{
+    font-size: .95rem;
+    font-weight: 400;
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 1.5rem;
+    font-family: 'Karla', sans-serif;
+    line-height: 1.8rem;
+} 
+
+.intro .leftcolumn .leftcolumncontent a{
+    text-decoration: none;
+    display: inline-block;
+    padding: .6rem 3rem;
+    border: 1px solid hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 100%);
+    position: relative;
+    text-transform: uppercase;
+    font-size: .56rem;
+    transition: .5s;
+    z-index: 2;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    font-family: 'Karla', sans-serif;
+}
+
+.intro .leftcolumn .leftcolumncontent a:hover{
+    color: hsl(0, 0%, 0%);
+}
+
+.intro .leftcolumn .leftcolumncontent a::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: hsl(0, 0%, 100%);
+    transition: .5s;
+    z-index: -1;
+}
+
+.intro .leftcolumn .leftcolumncontent a:hover::before{
+    width: 100%;
+}
+
+.intro .rightcolumn{
+    flex-basis: 50%;
+    height: 100%;
+    background-image: url(images/image-intro-desktop.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-top: 10rem;
+    z-index: 1;
+}
+
+#mobilenav{
+    display: none;
+}
+
+/** How we work section starts here **/
+.how-we-work{
+    width: 100%;
+    position: relative;
+    padding: 16rem 8rem 8rem;
+}
+
+.how-we-work hr{
+    width: 10rem;
+    color: hsla(0, 0%, 100%, 0.5);
+}
+
+.how-we-work h2{
+    font-size: 4rem;
+    font-weight: 400;
+    color: hsl(0, 0%, 0%);
+    margin: 3rem 0 4rem;
+    font-family: 'DM Serif Display', serif;
+}
+
+.how-we-work .servicescontent{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.how-we-work .servicescontent .content{
+    flex-basis: 32%;
+}
+
+.how-we-work .servicescontent .content img{
+    width: 4.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.how-we-work .servicescontent .content h4{
+    font-size: 1.6rem;
+    margin: 0 0 1rem;
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+}
+
+.how-we-work .servicescontent .content p{
+    font-size: .98rem;
+    font-family: 'Karla', sans-serif;
+}
+
+.how-we-work .find-out{
+    padding: 3rem 5rem;
+    background-color: hsl(256, 26%, 20%);
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+    background-image: url(images/bg-pattern-how-we-work-desktop.svg);
+    background-position: right top;
+    background-repeat: no-repeat;
+    margin-top: 6rem;
+    width: 100%;
+}
+
+.how-we-work .find-out h5{
+    font-size: 3rem;
+    color: hsl(0, 0%, 100%);
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+}
+
+.how-we-work .find-out a{
+    text-decoration: none;
+    display: inline-block;
+    padding: .6rem 1rem;
+    border: 1.5px solid hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 100%);
+    position: relative;
+    text-transform: uppercase;
+    font-size: .7rem;
+    transition: .5s;
+    z-index: 2;
+    font-weight: 700;
+    letter-spacing: .2rem;
+    font-family: 'Karla', sans-serif;
+}
+
+.how-we-work .find-out a:hover{
+    color: hsl(256, 26%, 20%);
+}
+
+.how-we-work .find-out a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background: hsl(0, 0%, 100%);
+    transition: .5s;
+    z-index: -1;
+}
+
+.how-we-work .find-out a:hover::before{
+    width: 100%;
+}
+
+/** Site footer starts here **/
+footer{
+    width: 100%;
+    padding: 3rem 8rem;
+    position: relative;
+    background-color: hsl(0, 0%, 98%);
+    background-image: url(images/bg-pattern-footer-desktop.svg);
+    background-position: left top;
+    background-size: 35%;
+    background-repeat: no-repeat;
+}
+
+footer .footer-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+footer .footer-nav a{
+    text-decoration: none;
+}
+
+footer .footer-nav a img{
+    width: 6rem;
+}
+
+footer .footer-nav nav ul{
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+}
+
+footer .footer-nav nav ul li{
+    margin-right: 1rem;
+    list-style: none;
+}
+
+footer .footer-nav nav ul li:nth-child(4){
+    margin-right: 0;
+}
+
+footer .footer-nav nav ul li a{
+    text-decoration: none;
+}
+
+footer .footer-nav nav ul li a img{
+    width: 1.2rem;
+    filter: brightness(100%);
+    transition: .5;
+}
+
+footer .footer-nav nav ul li a img:hover{
+    filter: brightness(40%);
+}
+
+footer hr{
+    margin: 1.5rem 0 2.5rem;
+}
+
+footer .footer-links{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+footer .footer-links .footer-links-section{
+    flex-basis: 25%;
+}
+
+footer .footer-links .footer-links-section h6{
+    font-size: .7rem;
+    text-transform: uppercase;
+    letter-spacing: .07rem;
+    color: hsl(273, 4%, 51%);
+    margin-bottom: 1.5rem;
+    font-family: 'Karla', sans-serif;
+}
+
+footer .footer-links .footer-links-section ul li{
+    display: block;
+    margin-bottom: .5rem;
+}
+
+footer .footer-links .footer-links-section ul li a{
+    text-transform: uppercase;
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .07rem;
+    color: hsl(0, 0%, 0%);
+    font-weight: 700;
+    text-decoration: none;
+    transition: 1s;
+    cursor: pointer;
+    font-family: 'Karla', sans-serif;
+}
+
+footer .footer-links .footer-links-section ul li a:hover{
+    text-decoration: underline;
+}
+
+footer .attribution{
+    font-size: .8rem;
+    text-align: center;
+    position: relative;
+    margin-top: 2rem;
+    font-family: 'Karla', sans-serif;
+}
+
+footer .attribution a{
+    text-decoration: none;
+    color: hsl(256, 26%, 20%);
+    transition: .5s;
+    font-family: 'Karla', sans-serif;
+}
+
+footer .attribution a:hover{
+    color: hsl(257, 88%, 35%); 
+}
+
+/** Mobile Layout design starts here **/
+
+@media (max-width: 991px){
+    html, body{
+        overflow-x: hidden!important;
+    }
+    
+    .nav-bar{
+        padding: 1rem 1rem;
+        overflow-x: hidden;
+        z-index: 10;
+    }
+
+    .nav-bar a img{
+        width: 6rem;
+    }
+
+    .nav-bar nav ul{
+        display: none;
+    }
+
+    .nav-bar .btn{
+        display: block;
+        width: 1.6rem;
+        transition: 3s;
+    }
+
+    /** Mobile Navigation design **/
+
+    #mobilenav{
+        display: block;
+        position: fixed;
+        top: 0;
+        left: -991px;
+        width: 100vw;
+        height: 100vh;
+        background-color: hsl(270, 9%, 17%);
+        background-image: url(images/bg-pattern-mobile-nav.svg);
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        background-size: 100% 50%;
+        z-index: 9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 1.5rem;
+        text-align: center;
+        transition: 1s;
+    }
+
+    .mobile-nav ul li{
+        display: block;
+        margin-bottom: 3rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .mobile-nav ul li:nth-child(4){
+        border: 1px solid hsl(0, 0%, 100%);
+        padding: .8rem 5rem;
+    }
+
+    .mobile-nav ul li a{
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: .1rem;
+        color: hsl(0, 0%, 100%);
+        font-family: 'Karla', sans-serif;
+    }
+
+    .intro{
+        flex-wrap: wrap;
+        height: 100vh;
+        background-color: transparent;
+        padding: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .intro .right-intro-bg{
+        display: none;
+    }
+    
+    .intro .left-intro-bg{
+       display: none;
+    }
+
+    .intro .right-intro-bg-mobile{
+        display: block;
+        position: absolute;
+        bottom: -60%;
+        right: 0;
+        z-index: 2;
+    }
+    
+    .intro .left-intro-bg-mobile{
+        display: block;
+        position: absolute;
+        top: 60%;
+        left: 0;
+        z-index: 2;
+    }
+
+    .intro .leftcolumn{
+        flex-basis: 100%;
+        order: 2;
+        height: 70vh;
+        z-index: 1;
+        background-color: hsl(256, 26%, 20%);
+        text-align: center;
+        padding: 0 1.5rem;
+    }
+
+    .intro .rightcolumn{
+        flex-basis: 100%;
+        height: 60vh;
+        background-image: url(images/image-intro-mobile.jpg);
+        background-position: center;
+        background-size: cover;
+        margin-top: 0;
+        z-index: 1;
+        order: 1;
+    }
+
+    .intro .leftcolumn .leftcolumncontent{
+        position: relative;
+        margin-top: 0;
+    }
+
+    .intro .leftcolumn .leftcolumncontent h1{
+        font-size: 2.5rem;
+        margin: 3rem 1rem 1rem;
+        line-height: 2.5rem;
+    }
+
+    .intro .leftcolumn .leftcolumncontent p{
+        font-size: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    .intro .leftcolumn .leftcolumncontent hr{
+        display: none;
+    }
+
+    .how-we-work{
+        width: 100vw;
+        position: relative;
+        padding: 16rem 1.5rem 8rem;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .how-we-work hr{
+        width: 10rem;
+        color: hsla(0, 0%, 100%, 0.5);
+        display: block;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .how-we-work h2{
+        font-size: 3rem;
+        font-weight: 700;
+        color: hsl(0, 0%, 0%);
+        margin: 3rem 0;
+    }
+
+    .how-we-work .servicescontent .content{
+        flex-basis: 100%;
+        margin-bottom: 3rem;
+    }
+
+    .how-we-work .servicescontent .content p{
+        font-size: 1.01rem;
+        line-height: 1.5rem;
+    }
+
+    .how-we-work .find-out{
+        padding: 4rem 2rem;
+        flex-direction: column;
+        background-image: url(images/bg-pattern-how-we-work-mobile.svg);
+        background-position: right top;
+        background-repeat: no-repeat;
+        margin-top: 6rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .how-we-work .find-out h5{
+        font-size: 2rem;
+    }
+
+    .how-we-work .find-out a{
+        margin-top: 2rem;
+    }
+
+    footer{
+        padding: 3rem 2rem;
+        width: 100%;
+        background-image: url(images/bg-pattern-footer-mobile.svg);
+        background-position: left top;
+        background-size: 100% 15%;
+        background-repeat: no-repeat;
+    }
+
+    footer .footer-nav{
+        flex-direction: column;
+    }
+
+    footer .footer-nav a img{
+        width: 6rem;
+    }
+
+    footer .footer-nav nav ul{
+        margin-top: 1.5rem;
+    }
+
+    footer .footer-nav nav ul li a img{
+        width: 1.25rem;
+    }
+
+    footer .footer-links .footer-links-section{
+        flex-basis: 100%;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    body{
+        overflow-x: hidden!important;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .intro .leftcolumn .leftcolumncontent p{
+        font-size: .9rem;
+        margin-bottom: 2rem;
+    }
+
+    .intro .leftcolumn .leftcolumncontent h1{
+        font-size: 2.3rem;
+    }
+
+    .mobile-nav ul li a{
+        font-size: .8rem;
+    }
+}
