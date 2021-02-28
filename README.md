@@ -23,6 +23,8 @@ Working on this project, I was able to:
 - Improve my skills on building responsive web pages
 - Improve my skills working on a real-life workflow
 
-## 
+## Live URL
+
+https://insure-landing-page-five-xi.vercel.app/
 
 🚀
